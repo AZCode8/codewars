@@ -18,8 +18,8 @@ take the next value in
 array.count(item) for item in array 
 
 '''
-
-
+# APPROACH #1
+#
 # def count_most_frecuent(array):
 #     unique_num = []
 #     highest_num = 0
@@ -34,20 +34,27 @@ array.count(item) for item in array
 
 #     return (highest_num)
 
-# def count_most_frecuent(collection):
+# APPROACH #2
+#
 
-#     if collection != []:
-#         my_dict = {i: collection.count(i) for i in collection}
-#         highest_num = max(my_dict.values())
-#     else:
-#         highest_num = 0
-
-#     return highest_num
 
 def count_most_frecuent(collection):
-    if collection:
-        return max([collection.count(item) for item in collection])
-    return 0
+
+    if collection != []:
+        my_dict = {i: collection.count(i) for i in collection}
+        print(my_dict)
+        highest_num = max(my_dict.values())
+    else:
+        highest_num = 0
+
+    return highest_num
+
+# APPROACH #3 Cleaner code
+#
+# def count_most_frecuent(collection):
+#     if collection:
+#         return max([collection.count(item) for item in collection])
+#     return 0
 
 
 print(count_most_frecuent(
