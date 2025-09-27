@@ -1,4 +1,5 @@
-'''Simple Pig Latin
+'''
+Simple Pig Latin
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
 Examples
@@ -16,6 +17,7 @@ for the first item in the list:
 The original problem not mention what to do with punctaction symbols so, I get another approach to solve the problem importing string and using the module string.punctuation, so when there is a punctuation the code don't add 'ay' to the end, only with words.
 
 '''
+
 
 import string
 
