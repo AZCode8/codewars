@@ -38,23 +38,24 @@ array.count(item) for item in array
 #
 
 
-def count_most_frecuent(collection):
-
-    if collection != []:
-        my_dict = {i: collection.count(i) for i in collection}
-        print(my_dict)
-        highest_num = max(my_dict.values())
-    else:
-        highest_num = 0
-
-    return highest_num
-
-# APPROACH #3 Cleaner code
-#
 # def count_most_frecuent(collection):
-#     if collection:
-#         return max([collection.count(item) for item in collection])
-#     return 0
+
+#     if collection != []:
+#         my_dict = {i: collection.count(i) for i in collection}
+#         print(my_dict)
+#         highest_num = max(my_dict.values())
+#     else:
+#         highest_num = 0
+
+#     return highest_num
+
+# APPROACH  # 3 Cleaner code
+
+
+def count_most_frecuent(collection):
+    if collection:
+        return max([collection.count(item) for item in collection])
+    return 0
 
 
 print(count_most_frecuent(
