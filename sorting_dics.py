@@ -14,6 +14,9 @@ sort_dict({1:2, 2:4, 3:6}) == [(3,6), (2,4), (1,2)]
 '''
 
 
+from operator import itemgetter
+
+
 def sort_dict(given_dic):
     lst_result = []
     values = list(given_dic.values())
@@ -26,6 +29,11 @@ def sort_dict(given_dic):
                 lst_result.append((k, v))
 
     return lst_result
+
+
+def sort_dict(d):
+    'return a sorted list of tuples from the dictionary'
+    return sorted(d.items(), key=itemgetter(1), reverse=True)
 
 
 print(sort_dict({3: 1, 2: 2, 1: 3}) == [(1, 3), (2, 2), (3, 1)])
